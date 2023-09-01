@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+</head>
+<body>
+    <!-- 
+        when user click on lable the linked input field get focused, input id = label for
+        - action attribute in form - redirect to that page(file name in action attr.)
+        - method - HTTP method accordingly
+            - GET - data goes in URL,
+            - POST - data goes in headers.
+        name value should be same for select one radio button from among.
+     -->
+    <h2>HTML FORMS</h2>
+    <form action="" method="">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="username.." required>
+        <br> <br>
+        <label for="password">Password</label>
+        <input type="password" name="" id="password" placeholder="your password.." required>
+        <br> <br>
+        <label for="email">Email</label>
+        <input type="email" name="" id="email" required>
+        <br> <br>
+        <input type="submit" value="signin">
+        <br> <br>
+        <p>select your gender</p>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <br> <br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <br>
+        <label for="state">Select your state</label>
+        <select name="states" id="state">
+            <option value="" disabled selected>select Here</option>
+            <option value="UP">Madhya Pradesh</option>
+            <option value="UP">Uttar Pradesh</option>
+        </select>
+    </form>
+</body>
+</html>
