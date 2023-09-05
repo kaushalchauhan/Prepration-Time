@@ -1,0 +1,33 @@
+/* specificity
+!important(not recommended)
+- inline style attribute (not recommended) > id selector > class selector > element selector
+*/
+h1{
+    color: green;
+}
+.h1class{
+    color:red;
+}
+#h1id{
+    color: brown;
+}
+.blue{
+    color: blue;
+}
+.red{
+    color: red;
+}
+
+/* <div id="container">
+<ul class="songs">
+    <li>song 1</li>
+    <li class="fav">song 2</li>
+    <li>song 3</li>
+    <li>song 4</li>
+</ul>
+</div> */
+
+div#container ul.songs li{
+    color: brown;
+    background-color: #414141;
+}
