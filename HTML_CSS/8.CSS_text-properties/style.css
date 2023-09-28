@@ -3,9 +3,23 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: #1c1a1a;
+    color: #f1f1f1;
+}
+::selection{
+    color: rgba(188, 131, 217, 0.835);
+    background-color: #81b8cf;
+}
 p{
     font-size: 20px;
     line-height: 1.9;
     letter-spacing: 2px;
     word-spacing: 8px;
+}
+.en.en{ /* by writing the class name again, this will increase this specificity*/
+    color: navajowhite;
+}
+.kaushal{
+    color: #ed7474;
 }
