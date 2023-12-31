@@ -1,0 +1,16 @@
+.box-1 {
+  width: 200px;
+  height: 200px;
+  background-color: aquamarine;
+  border-radius: 3%;
+  /* transition-property: background;
+  transition-duration: 0.9s;
+  transition-timing-function: ease-in-out; */
+  /* transition: background 900ms ease-in, width 900ms ease-in; shorthand  */
+  transition: all 0.9s ease-in;
+}
+.box-1:hover {
+  background: red;
+  cursor: pointer;
+  width: 250px;
+}

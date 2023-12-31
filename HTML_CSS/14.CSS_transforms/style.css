@@ -1,0 +1,15 @@
+.box-1 {
+  width: 100px;
+  height: 100px;
+  font-size: 1.5rem;
+  background-color: lightcoral;
+  margin: 200px auto;
+  /* we can rotate, skew, scale, translate our element, generally we use these with transitions, transform-origin to change this(default is center)*/
+  transition: transform 1s ease-in-out;
+}
+.box-1:hover {
+  /* transform: rotate(20deg); */
+  /* transform: scaleY(2); */
+  /* transform: translateX(50px); */
+  transform: skewX(30deg);
+}

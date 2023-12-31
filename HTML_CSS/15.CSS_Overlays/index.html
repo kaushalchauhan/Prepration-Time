@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overlays</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1 class="title">Overlays</h1>
+    <div class="box">
+        <img src="img/perfume.jpg" alt="Perfume">
+        <div class="box-content">
+            <h3>Buy things at amazing price</h3>
+            <a href="https://www.google.com" target="_blank" class="btn">Buy Now</a>
+        </div>
+    </div>
+    <div id="list">
+        <ul id="list" style="font-size: 32px; margin-left: 50px;">
+            <li><img src="./img/perfume.jpg" alt=""></li>
+            <li><img src="./img/perfume.jpg" alt=""></li>
+            <li><img src="./img/perfume.jpg" alt=""></li>
+            <li><img src="./img/perfume.jpg" alt=""></li>
+            <li><img src="./img/perfume.jpg" alt=""></li>
+            <li><img src="./img/perfume.jpg" alt=""></li>
+            <li><img src="./img/perfume.jpg" alt=""></li>
+            <li><img src="./img/perfume.jpg" alt=""></li>
+            <li><img src="./img/perfume.jpg" alt=""></li>
+            <li><img src="./img/perfume.jpg" alt=""></li>
+        </ul>
+    </div>
+    <div id="setTimeout" style="text-align: center;">
+        <h1 class="name">Kaushal</h1>
+        <button id='stop'>stop</button>
+    </div>
+    <style>
+        #list img {
+            width: 300px;
+        }
+    </style>
+</body>
+<script>
+    // remove element on click
+    document.querySelector('#list').addEventListener('click', function (e) {
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.tagName);
+            let removeIt = e.target.parentNode;
+            removeIt.remove()
+        }
+    })
+    const changeName = function () {
+        document.querySelector('.name').innerHTML = 'My name is Kaushal Chauhan';
+    }
+    const timeout = setTimeout(changeName, 2000);
+
+    document.querySelector('#stop').addEventListener('click', function () {
+        console.log('stopp');
+        clearTimeout(timeout);
+    })
+
+</script>
+</html>

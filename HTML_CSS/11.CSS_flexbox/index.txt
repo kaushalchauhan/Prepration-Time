@@ -1,0 +1,113 @@
+---- css-tricks ----
+// Flex 
+- in which we define display: flex; this is container and Properties for the Children(flex items)
+
+// Flexbox terminologies
+- by default, (main axis) left to right,
+- (cross axis) top to down
+
+// flex container properties
+
+# flex-direction: row | row-reverse | column | column-reverse;  /* default is row */
+  row (default): left to right,
+  row-reverse: right to left,
+  column: top to bottom, basically main-axis & cross-axis position gets change,
+  column-reverse:  bottom to top
+
+# flex-wrap: nowrap | wrap | wrap-reverse;
+  nowrap (default): all flex items will be on one line,
+  wrap: flex items will wrap onto multiple lines, from top to bottom.
+  wrap-reverse: flex items will wrap onto multiple lines from bottom to top.
+
+// we have to use flex-wrap:wrap; property if we want to control flex-item width.
+
+# flex-flow: column wrap; 
+// This is a shorthand for the flex-direction and flex-wrap properties, which together define the flex container’s main and cross axes. The default value is row nowrap.
+
+# justify-content: : flex-start(default) | flex-end | center | space-between | space-around | space-evenly | start | end | left | right ... + safe | unsafe;
+
+// This defines the alignment along the main axis,
+  
+  - flex-start (default): items are packed toward the start of the flex-direction.
+  - flex-end: items are packed toward the end of the flex-direction.
+  - start: items are packed toward the start of the writing-mode direction.
+  - end: items are packed toward the end of the writing-mode direction.
+  - left: items are packed toward left edge of the container, unless that doesn’t make sense with the flex-direction, then it behaves like start.
+  - right: items are packed toward right edge of the container, unless that doesn’t make sense with the flex-direction, then it behaves like end.
+  - center: items are centered along the line
+  - space-between: items are evenly distributed in the line; first item is on the start line, last item on the end line
+  - space-around: items are evenly distributed in the line with equal space around them. Note that visually the spaces aren’t equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has its own spacing that applies.
+  - space-evenly: items are distributed so that the spacing between any two items (and the space to the edges) is equal.
+
+# align-items: stretch (default) | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end | self-start | self-end + ... safe | unsafe;
+
+// This defines the alignment along the main axis
+
+  - stretch (default): stretch to fill the container (still respect min-width/max-width),
+  - flex-start / start / self-start: items are placed at the start of the cross axis. The difference between these is subtle, and is about respecting the flex-direction rules or the writing-mode rules.
+  - flex-end / end / self-end: items are placed at the end of the cross axis. The difference again is subtle and is about respecting flex-direction rules vs. writing-mode rules.
+  - center: items are centered in the cross-axis
+  - baseline: items are aligned such as their baselines align
+
+
+# align-content: flex-start | flex-end | center | space-between | space-around | space-evenly | stretch | start | end | baseline | first baseline | last baseline + ... safe | unsafe;
+
+// This aligns a flex container’s lines within when there is extra space in the cross-axis, similar to how justify-content aligns individual items within the main-axis.
+
+Note: This property only takes effect on multi-line flexible containers, where flex-wrap is set to either (wrap or wrap-reverse). A single-line flexible container (i.e. where flex-wrap is set to its default value, no-wrap) will not reflect align-content.
+
+  - normal (default): items are packed in their default position as if no value was set.
+  - flex-start / start: items packed to the start of the container. The (more supported) flex-start honors the flex-direction while start honors the writing-mode direction.
+  - flex-end / end: items packed to the end of the container. The (more support) flex-end honors the flex-direction while end honors the writing-mode direction.
+  - center: items centered in the container
+  - space-between: items evenly distributed; the first line is at the start of the container while the last one is at the end
+  - space-around: items evenly distributed with equal space around each line
+  - space-evenly: items are evenly distributed with equal space around them
+  - stretch: lines stretch to take up the remaining space
+
+# gap, row-gap, column-gap:
+.container {
+  display: flex;
+  ...
+  gap: 10px;
+  gap: 10px 20px; /* row-gap column gap */
+  row-gap: 10px;
+  column-gap: 20px;
+}
+// The gap property explicitly controls the space between flex items. It applies that spacing only between items not on the outer edges.
+
+
+// flex items properties
+
+# order: 5; /* default is 0 */
+
+// we can control items order-flow using order property.
+
+
+# align-self: auto | flex-start | flex-end | center | baseline | stretch;
+// This allows the default alignment (or the one specified by align-items) to be overridden for individual flex items.
+// we can override property of align item for any item.
+
+# flex-basis:  | auto; /* default auto */
+ - this is item's initial length towards main axis end,
+ - specificity of flex-basic is greater more then width of the item.
+// This defines the default size of an element before the remaining space is distributed. It can be a length (e.g. 20%, 5rem, etc.) or a keyword. The auto keyword means “look at my width or height property” (which was temporarily done by the main-size keyword until deprecated). The content keyword means “size it based on the item’s content” – this keyword isn’t well supported yet, so it’s hard to test and harder to know what its brethren max-content, min-content, and fit-content do.
+
+# flex-grow: 4; /* default 0 */
+
+// It dictates what amount of the available space inside the flex container the item should take up. 
+// If all items have flex-grow set to 1, the remaining space in the container will be distributed equally to all children. If one of the children has a value of 2, that child would take up twice as much of the space either one of the others (or it will try, at least). 
+// it's not like if one item value has flex-grow:2, it will not be 2x of others okay?
+// we pass integer value in flex-grow,basically we can manage remaining space of container.
+// Negative numbers are invalid.
+
+#flex-shrink: 3; /* default 1 */
+// we can understand this like, oppostie of ratio property if we give to items. suppose we have 3 items, 1st item shrink value is 1, 2nd item's = 2 and 3rd item's has 3. so now, 3rd item will be smallest. 
+// This defines the ability for a flex item to shrink if necessary.
+// Negative numbers are invalid.
+
+# flex
+// This is the shorthand for flex-grow, flex-shrink and flex-basis combined.
+
+
+

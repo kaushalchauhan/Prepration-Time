@@ -1,0 +1,46 @@
+CSS Grid
+1. Grid Container
+2. Grid Item
+
+
+1. Grid Container properties
+
+(i) grid-template-column : 1f 1fr 1fr; // number of columns with their width, repeat(3, 1fr)
+(ii) row-gap
+(iii) column-gap
+(iv) gap: 10px 20px; row+column(shorthand property)
+(v) grid-template-row: 100px 100px; first two rows will be of this much size;
+(vi) grid-auto-rows: 100px; this will set rows size, that created implicitly by the browser
+(vii) grid-auto-columns: 100px; this will set columns size, that created implicitly by the browser
+(viii) grid-auto-flow: row(defualt);// property- the new created element in which direction
+(ix) grid-template-column : repeat(auto-fill, 150px) // variable column (auto-fill/auto-fit)
+(x) grid-auto-flow: dense; // will occupy the remaining space if there
+(xi) align-items: stretch(default)/start/end; // place items in y axis
+(xii) justify-items: stretch(default)/start/end; // place items in x axis
+(xiii) place-items: (shorthand of above two properties);
+(xiv) align-content: // place whole content at y within the container
+(xv) justify-content: start(def)/end,space-evenly,space-around etc //place whole content at x within the container
+(xvi) place-content: shorthand of above two properties
+(xvii) grid-template-areas : 
+'header header'
+'content 'aside''
+'footer footer', then i have to use this in grid items like this
+header{ 
+    grid-aria: header; // like this
+}
+
+
+
+
+2. Grid Item properties
+
+i) grid-column-start: 1; 1 is column line number 
+ii) grid-column-end: 2;
+iii) grid-column: 1/3; // shorthand property // 1 / span 2(span 2 means column 2)
+iv) grid-row-start: 1; 1 is row line number
+v) grid-row-end: 2;
+vi) grid-row: 1/2; // shorthand property 
+vii) justify-self: place item in y direction
+viii) align-self: place item in x direction
+ix) place-self: shorthand of above two properties
+
