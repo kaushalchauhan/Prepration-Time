@@ -37,3 +37,7 @@ console.log(person[ageVar]) // will print 20
 
 // Define an object constructor, and then create objects of the constructed type.
 // Create an object using Object.create().
+
+//! ######### Deleting Properties ########
+// The delete keyword deletes a property from an object:
+delete person["age"];
