@@ -6,6 +6,42 @@
     <title>learning</title>
 </head>
 <body>
-    <script src="./DOM.js"></script>
+    <style>
+        body {
+            background: #323131;
+        }
+
+        .container {
+            width: 30%;
+            height: 400px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .container img {
+            width: 20%;
+            height: 100%;
+            object-fit: cover;
+            border: 1ps solid #dbd1d1;
+            transition: 0.6s ease;
+            cursor: pointer;
+        }
+
+        .container img:hover {
+            width: 100%;
+        }
+    </style>
+
+    <div class="container">
+        <img src="https://images.pexels.com/photos/7258489/pexels-photo-7258489.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+            alt="">
+        <img src="https://images.pexels.com/photos/4061667/pexels-photo-4061667.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+            alt="">
+        <img src="https://images.pexels.com/photos/4061662/pexels-photo-4061662.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="">
+        <img src="https://images.pexels.com/photos/4061649/pexels-photo-4061649.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+            alt="">
+    </div>
+    <script src="./NMJS/S2/EP-06-this.js"></script>
 </body>
 </html>
